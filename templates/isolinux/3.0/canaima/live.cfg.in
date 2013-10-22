@@ -6,7 +6,7 @@ label live-@FLAVOUR@
 	append @APPEND_LIVE@
 
 label live-@FLAVOUR@-failsafe
-	menu label ^Probar e Instalar (@FLAVOUR@ failsafe)
+	menu label Modo a Prueba de ^Fallos (@FLAVOUR@ failsafe)
 	linux @LINUX@
 	initrd @INITRD@
 	append @APPEND_LIVE_FAILSAFE@
