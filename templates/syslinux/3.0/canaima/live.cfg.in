@@ -1,6 +1,6 @@
 LABEL live-@FLAVOUR@
 	MENU LABEL ^Probar e Instalar (@FLAVOUR@)
-	MENU DEFAULT
+	menu default
 	LINUX @LINUX@
 	INITRD @INITRD@
 	APPEND @APPEND_LIVE@
