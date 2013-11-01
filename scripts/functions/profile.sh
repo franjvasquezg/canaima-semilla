@@ -161,16 +161,27 @@ CS_LOAD_PROFILE() {
 			if [ $( ${ECHO} ${PROFILE_ARCH} | ${GREP} -wc "${ARCH}") -ge 1 ]; then
 				if ${DPKG} --compare-versions "${LB_VERSION}" ge 3.0; then
 					ARCH="i386"
-					KERNEL_ARCH="686-pae 486"
+					KERNEL_ARCH="686-pae"
 				else
 					ARCH="i386"
-					KERNEL_ARCH="686 486"
+					KERNEL_ARCH="686"
 				fi
 			else
 				ERRORMSG "Arquitectura '%s' no soportada por el perfil '%s'. Abortando." "${ARCH}" "${SABOR}"
 				exit 1
 			fi
 		;;
+
+		486)
+			if [ $( ${ECHO} ${PROFILE_ARCH} | ${GREP} -wc "${ARCH}") -ge 1 ]; then
+				ARCH="i386"
+				KERNEL_ARCH="486"
+			else
+				ERRORMSG "Arquitectura '%s' no soportada por el perfil '%s'. Abortando." "${ARCH}" "${SABOR}"
+				exit 1
+			fi
+		;;
+
 
 		*)
 			ERRORMSG "Arquitectura '%s' no soportada por %s. Abortando." "${ARCH}" "${CS_NAME}"
