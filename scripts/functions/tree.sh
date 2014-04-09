@@ -147,7 +147,7 @@ CS_CREATE_TREE() {
 	fi
 
 	LB_ARGUMENTS="--architecture=\"${ARCH}\" \
---linux-flavours=\"${KERNEL_ARCH}\" \
+--linux-flavours=\"3.11.3-amd64\" \
 --distribution=\"${META_CODENAME}\" \
 --mode=\"${META_MODE}\" \
 --apt=\"aptitude\" \

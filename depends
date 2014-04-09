@@ -6,3 +6,7 @@ debootstrap
 live-build
 locales
 lsb-release
+kvm
+bc
+gettext
+wodin
